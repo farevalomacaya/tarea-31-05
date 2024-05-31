@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamientificador 2000</title>
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src="assets/js/bootstrap.bundle.min.js"></script>
+</head>
+
+<body class="bg-light">
+    <header class="container-fluid p-5 bg-primary text-white text-center">
+        <h1>Registro de Vehículos</h1>
+    </header>
+    <main class="container-fluid">
+        <div class="row mt-3">
+            <div class="col-4">
+                <form action="" class="card">
+                    <div class="card-header">
+                        <h5>Ingresa los datos solicitados</h5>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <label>Run del Propietario</label>
+                            <input type="text" class="form-control" id="run" name="run" onblur="verificar(this.id)">
+                            <div id="e-run"></div>
+                        </div>
+                        <div>
+                            <label>Nombre del propietario</label>
+                            <input type="text" class="form-control" id="nombre" name="nombre" onblur="verificar(this.id)">
+                            <div id="e-nombre"></div>
+                        </div>
+                        <div>
+                            <label>Marca Vehículo</label>
+                            <input type="text" class="form-control" id="marca" name="marca" onblur="verificar(this.id)">
+                            <div id="e-marca"></div>
+                        </div>
+
+                        <div>
+                            <label>Modelo Vehículo</label>
+                            <input type="text" class="form-control" id="modelo" name="modelo" onblur="verificar(this.id)">
+                            <div id="e-modelo"></div>
+                        </div>
+                        <div>
+                            <label>Patente Vehículo</label>
+                            <input type="text" class="form-control" id="patente" name="patente" onblur="verificar(this.id)"  maxlength="6">
+                            <div id="e-patente"></div>
+                        </div>
+                        <div>
+                            <label>Fecha Ingreso</label>
+                            <input type="date" class="form-control" id="fechaIngreso" name="fechaIngreso" onblur="verificar(this.id)">
+                            <div id="e-fechaIngreso"></div>
+                        </div>
+                        <div>
+                            <label>Hora Ingreso</label>
+                            <input type="time" class="form-control" id="horaIngreso" name="horaIngreso" onblur="verificar(this.id)">
+                            <div id="e-horaIngreso"></div>
+                        </div>
+                        <div>
+                            <label>Fecha Salida</label>
+                            <input type="date" class="form-control" id="fechaSalida" name="fechaSalida" onblur="verificar(this.id)">
+                            <div id="e-fechaSalida"></div>
+                        </div>
+                        <div>
+                            <label>Hora Salida</label>
+                            <input type="time" class="form-control" id="horaSalida" name="horaSalida" onblur="verificar(this.id)">
+                            <div id="e-horaSalida"></div>
+                        </div>
+                    </div>
+                    <div class="card-footer text-center">
+                        <input type="reset" value="Limpiar" class="btn btn-info" onclick="limpiar()">
+                        <input type="button" id="btnGuardar" value="Guardar" class="btn btn-success">
+                    </div> 
+                </form>
+            </div>
+            <div class="col-8">
+                <div class="table-responsive">
+                    <table class="table table-bordered table-hover">
+                        <thead class="table-dark">
+                            <tr>
+                                <th>Run Propietario</th>
+                                <th>Nombre</th>
+                                <th>Marca</th>
+                                <th>Modelo</th>
+                                <th>Patente</th>
+                                <th>Fecha Ingreso</th>
+                                <th>Hora Ingreso</th>
+                                <th>Fecha Salida</th>
+                                <th>Hora Salida</th>
+                                <th></th>
+                            </tr>
+                        </thead>
+                        <tbody id="contenido">
+                           
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="assets/js/sweetalert2.min.js"></script>
+    <script src="utilidades.js"></script>
+    <script src="funciones.js" type="module"></script>
+</body>
+
+</html>
